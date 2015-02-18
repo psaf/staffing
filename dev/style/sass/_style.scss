@@ -1,0 +1,147 @@
+* {
+	font-size: $font-size;
+	line-height: $line-height;
+
+	font-family: 'proxima-nova', Arial, Helvetica, sans-serif;
+	
+	@include box-sizing(border-box);
+}
+
+html {
+	overflow: hidden; 
+}
+
+
+body {
+	background-image: url(../../images/bgpatter.png);
+}
+
+h3 {
+	margin-top: 0;
+}
+
+.bottom-border {
+	box-shadow: 0 3px 4px -4px #000;
+}
+
+.content-container {
+	@include outer-container;
+	
+	height: vh;
+
+	box-shadow: 0px 0px 4px #000;
+
+	background-color: #FFF;
+}
+
+.header {
+	@include row;
+
+	margin-bottom: 2em;
+}
+.branding {
+	@include span-columns(6);
+	padding: 2em;
+}
+
+.branding-icon {
+	@include hide-text;
+
+	width: 170px;
+	height: 100px;
+
+	background-image: url(../../images/logo.jpg);
+	background-size: contain;
+}
+
+.main-nav {
+	@include span-columns(6);
+	@include omega;
+	position: relative;
+	padding: 2em;
+
+	text-align: right;
+
+	ul {
+		@include clearfix;
+		position: absolute;
+		right: 2em;
+	
+		margin: 0;
+
+		list-style: none;
+	}
+
+	li {
+		float: left;
+
+		height: 60px;
+		padding: 0 3em;
+		margin: 20px .5em 20px 0;
+
+		line-height: 60px;
+
+		color: lighten($blue, 80%);
+
+		background-color: $blue;
+		
+		&:hover {
+			background-color: lighten($blue, 20%);
+		}
+
+		&:last-child {
+			margin-right: 0;
+		}
+	}
+}
+
+.heading-image {
+	@include row;
+
+	margin-bottom: 2em;
+	padding-bottom: 2em;
+	
+	.img {
+		@include span-columns(12);
+
+		height: 16em;
+
+		background-image: url(http://www.thebutlerdidit.ca/wp-content/uploads/2012/12/waiteratwedding.jpg);
+		background-size: cover;
+		background-position: center center;
+	}
+}
+
+.body-text-container {
+	@include row;
+	padding: 0 2em;
+	margin-bottom: 2em;
+}
+
+.staffing {
+	@include span-columns(4);
+}
+
+.body-text {
+	@include span-columns(8);
+}
+
+.contact {
+	widows: 100%;
+	padding: .5em .3em;
+}
+
+.footer {
+	position: absolute;
+	left: 0;
+	width: 100%;
+	height: 4em;
+	// margin-left: -20%;
+	background-color: #333;
+	color: lighten(#333, 80%);
+
+	p {
+		text-align: center;
+		line-height: 2em;
+	}
+}
